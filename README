@@ -6,4 +6,5 @@ This library was created to avoid CORS issue for application running on localhos
 Setup
 
 npm install
+
 npm start
