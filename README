@@ -1,0 +1,9 @@
+ANURA API PROXY
+
+This express server will act as a proxy server between localhost and Anura endpoint.
+This library was created to avoid CORS issue for application running on localhost
+
+Setup
+
+npm install
+npm start
