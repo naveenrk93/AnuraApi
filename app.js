@@ -2,8 +2,20 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const asyncHandler = require('express-async-handler');
+const cors = require('cors');
 
 app.use(express.json());
+
+app.use(cors());
+
+app.use(function (req, res, next) {
+
+    res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PATCH, DELETE, PUT");
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-Amp-Device-Id, X-Amp-Session-Id");
+
+    next();
+});
 
 const ANURA_API_ENDPOINT = "https://dozi-staging.zoominfo.com";
 
