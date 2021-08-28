@@ -29,6 +29,10 @@ app.all('/*', asyncHandler(async function (req, res){
         }
     };
 
+    if(req.headers['cookie']) {
+        requestOptions.headers['Cookie'] = req.headers['cookie']
+    }
+
     console.log(`requestOptions: ${JSON.stringify(requestOptions)}`);
 
     try {
