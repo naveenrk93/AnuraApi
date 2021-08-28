@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
 
     res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PATCH, DELETE, PUT");
     res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-Amp-Device-Id, X-Amp-Session-Id");
+    res.header("Access-Control-Allow-Headers", "Origin, Content-Type, Accept, Authorization, x-zisession, user, session-token, x-ziid, Cookie");
 
     next();
 });
